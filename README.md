@@ -1,10 +1,15 @@
 Serensic Client Library for Ruby
 =============================
 This is the Ruby client library for serensic's API. To use it you'll
+##Promise You Ill Start Sending sms in no time. 
+First Create An Account Here http://app.serensic.com/app
+
  [Installation](#installation)
- [Usage](#usage)
  [SMS API](#sms-api)
  [Coverage](#api-coverage)
+ 
+ [Usage](#usage)
+ 
  [License](#license)
 Installation
 ------------
@@ -24,7 +29,7 @@ For production you can specify the `SERERNSIC_USER` and `SERENSIC_SECRET`
 environment variables instead of specifying the key and secret explicitly.
 ## SMS API
 ### Send a text message
-
+##
 ```ruby
 response = client.send_message(to: 'YOUR NUMBER', msg: 'Hello world')
 unless response['data'].nil? || response['data'][0]['status'] != 'OK'
