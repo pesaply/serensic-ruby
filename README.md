@@ -1,4 +1,4 @@
-Serensic Client Library for Ruby
+Serensic Client SMS Library for Ruby and Rails
 =============================
 This is the Ruby client library for serensic's API. To use it you'll
 ##Promise You Ill Start Sending sms in no time. 
@@ -7,10 +7,6 @@ First Create An Account Here http://app.serensic.com/app
  [Installation](#installation)
  [SMS API](#sms-api)
  [Coverage](#api-coverage)
- 
- [Usage](#usage)
- 
- [License](#license)
 Installation
 ------------
 To install the Ruby client library using Rubygems:
@@ -23,9 +19,9 @@ ruby
 require 'serensic'
 Then construct a client object with your user and secret:
 ```ruby
-client = serensic::Client.new(user: 'YOUR-API-USER', secret: 'YOUR-API-SECRET')
+client = Serensic::Client.new(user: 'YOUR-API-USER', secret: 'YOUR-API-SECRET')
 ```
-For production you can specify the `SERERNSIC_USER` and `SERENSIC_SECRET`
+For production you can specify the `SERENSIC_USER` and `SERENSIC_SECRET`
 environment variables instead of specifying the key and secret explicitly.
 ## SMS API
 ### Send a text message
@@ -46,6 +42,8 @@ API Coverage
  Inbound Messages
  Search
  reports
+ balance
+ schedule
  Message
  Messages
  Rejections
