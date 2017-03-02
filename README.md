@@ -8,6 +8,7 @@ First Create An Account Here http://app.serensic.com/app
  [SMS API](#sms-api)
  [Coverage](#api-coverage)
 Installation
+##smpp support still get cooked 
 ------------
 To install the Ruby client library using Rubygems:
    gem install serensic
