@@ -1,6 +1,15 @@
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
 
-require 'serensic'
+require 'serensic
+'require 'net/http'
+
+uri = URI('http://app.serensic.com:15015/send')
+params = { :username => 'foo', :password => 'bar',
+           :to => '+255', :content => 'Hello world' }
+uri.query = URI.encode_www_form(params)
+
+response = Net::HTTP.get_response(uri)
+
 
 puts "\nWelcome to the Serensic Sender!"
 puts "--------------------------------\n\n"
