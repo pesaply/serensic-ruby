@@ -13,7 +13,7 @@ module Serensic
     def initialize(options = {})
       @user = options.fetch(:user) { ENV.fetch('SERERNSIC_USER') }
       @secret = options.fetch(:secret) { ENV.fetch('SERENSIC_SECRET') }
-      @host = options.fetch(:host) { 'http://app.serensic.com/app' }
+      @host = options.fetch(:host) { 'https://app.serensic.com/app' }
       @user_agent = "serensic-ruby/#{VERSION} ruby/#{RUBY_VERSION}"
     end
     def send_message(params)
